@@ -1,5 +1,21 @@
 # HttpToEmail
 
+This service allows you to send emails using an HTTP API.
+
+## TODO
+  - [ ] Allow a user sign up using an email.
+    - [ ] Send the user a magic login link.
+    - [ ] Generate a random basic auth user id.
+  - [ ] Set up an authentication plug which allows authenticating using basic auth
+  - [ ] Set up `/email` which accepts a message with the shape: `{"to":"minhajuddink@gmail.com", "from":"from@email.com", "subject":"Git it done!", "html_body":"<b>chop chop!</b>", "text_body":"chop chop!"}`
+  - [ ] Set up throttling so that only 10 emails can be sent per account per month.
+
+## Tech
+  - Database: DynamoDB
+  - SMTP Server: AWS SES
+
+## Dev setup
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
