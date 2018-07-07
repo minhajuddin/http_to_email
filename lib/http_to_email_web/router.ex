@@ -1,5 +1,5 @@
-defmodule HttpToEmailWeb.Router do
-  use HttpToEmailWeb, :router
+defmodule HTEWeb.Router do
+  use HTEWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,14 +13,14 @@ defmodule HttpToEmailWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", HttpToEmailWeb do
+  scope "/", HTEWeb do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", HttpToEmailWeb do
+  # scope "/api", HTEWeb do
   #   pipe_through :api
   # end
 end

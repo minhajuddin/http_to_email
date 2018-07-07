@@ -1,3 +1,3 @@
-defmodule HttpToEmailWeb.PageView do
-  use HttpToEmailWeb, :view
+defmodule HTEWeb.PageView do
+  use HTEWeb, :view
 end

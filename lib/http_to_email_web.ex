@@ -1,12 +1,12 @@
-defmodule HttpToEmailWeb do
+defmodule HTEWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use HttpToEmailWeb, :controller
-      use HttpToEmailWeb, :view
+      use HTEWeb, :controller
+      use HTEWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,17 +19,17 @@ defmodule HttpToEmailWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: HttpToEmailWeb
+      use Phoenix.Controller, namespace: HTEWeb
       import Plug.Conn
-      import HttpToEmailWeb.Router.Helpers
-      import HttpToEmailWeb.Gettext
+      import HTEWeb.Router.Helpers
+      import HTEWeb.Gettext
     end
   end
 
   def view do
     quote do
       use Phoenix.View, root: "lib/http_to_email_web/templates",
-                        namespace: HttpToEmailWeb
+                        namespace: HTEWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 2, view_module: 1]
@@ -37,9 +37,9 @@ defmodule HttpToEmailWeb do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import HttpToEmailWeb.Router.Helpers
-      import HttpToEmailWeb.ErrorHelpers
-      import HttpToEmailWeb.Gettext
+      import HTEWeb.Router.Helpers
+      import HTEWeb.ErrorHelpers
+      import HTEWeb.Gettext
     end
   end
 
@@ -54,7 +54,7 @@ defmodule HttpToEmailWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import HttpToEmailWeb.Gettext
+      import HTEWeb.Gettext
     end
   end
 

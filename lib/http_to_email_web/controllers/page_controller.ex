@@ -1,5 +1,5 @@
-defmodule HttpToEmailWeb.PageController do
-  use HttpToEmailWeb, :controller
+defmodule HTEWeb.PageController do
+  use HTEWeb, :controller
 
   def index(conn, _params) do
     render conn, "index.html"

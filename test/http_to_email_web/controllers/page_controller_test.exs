@@ -1,5 +1,5 @@
-defmodule HttpToEmailWeb.PageControllerTest do
-  use HttpToEmailWeb.ConnCase
+defmodule HTEWeb.PageControllerTest do
+  use HTEWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"

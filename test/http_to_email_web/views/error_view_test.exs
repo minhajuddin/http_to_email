@@ -1,16 +1,16 @@
-defmodule HttpToEmailWeb.ErrorViewTest do
-  use HttpToEmailWeb.ConnCase, async: true
+defmodule HTEWeb.ErrorViewTest do
+  use HTEWeb.ConnCase, async: true
 
   # Bring render/3 and render_to_string/3 for testing custom views
   import Phoenix.View
 
   test "renders 404.html" do
-    assert render_to_string(HttpToEmailWeb.ErrorView, "404.html", []) ==
+    assert render_to_string(HTEWeb.ErrorView, "404.html", []) ==
            "Not Found"
   end
 
   test "renders 500.html" do
-    assert render_to_string(HttpToEmailWeb.ErrorView, "500.html", []) ==
+    assert render_to_string(HTEWeb.ErrorView, "500.html", []) ==
            "Internal Server Error"
   end
 end

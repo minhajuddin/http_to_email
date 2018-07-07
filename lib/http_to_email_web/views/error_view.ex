@@ -1,5 +1,5 @@
-defmodule HttpToEmailWeb.ErrorView do
-  use HttpToEmailWeb, :view
+defmodule HTEWeb.ErrorView do
+  use HTEWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

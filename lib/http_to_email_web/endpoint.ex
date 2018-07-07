@@ -1,7 +1,7 @@
-defmodule HttpToEmailWeb.Endpoint do
+defmodule HTEWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :http_to_email
 
-  socket "/socket", HttpToEmailWeb.UserSocket
+  socket "/socket", HTEWeb.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -35,9 +35,9 @@ defmodule HttpToEmailWeb.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_http_to_email_key",
-    signing_salt: "k9KWfZ1u"
+    signing_salt: "PzJiN1bL"
 
-  plug HttpToEmailWeb.Router
+  plug HTEWeb.Router
 
   @doc """
   Callback invoked for dynamically configuring the endpoint.

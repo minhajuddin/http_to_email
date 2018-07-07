@@ -1,3 +1,3 @@
-defmodule HttpToEmailWeb.LayoutViewTest do
-  use HttpToEmailWeb.ConnCase, async: true
+defmodule HTEWeb.LayoutViewTest do
+  use HTEWeb.ConnCase, async: true
 end
