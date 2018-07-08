@@ -1,0 +1,5 @@
+# https://httptoemail.staticgarden.com/u/SGb9i2gDH3lSwtopATaBnw
+http://localhost:4000
+
+POST /api/email/SGb9i2gDH3lSwtopATaBnw
+{}

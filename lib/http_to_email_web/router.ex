@@ -20,6 +20,12 @@ defmodule HTEWeb.Router do
     get "/", PageController, :index
   end
 
+  scope "/api", HTEWeb do
+    pipe_through :api
+
+    post "/email/:id", EmailController, :create
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", HTEWeb do
   #   pipe_through :api
