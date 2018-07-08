@@ -1,0 +1,14 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [{
+        "Effect": "Allow",
+        "Action": [
+            "dynamodb:DeleteItem",
+            "dynamodb:GetItem",
+            "dynamodb:PutItem"
+        ],
+        "Resource": [
+            "arn:aws:dynamodb:us-east-1:679444759081:table/http_to_email_users"
+        ]
+    }]
+}

@@ -14,7 +14,8 @@ defmodule HTEWeb.Router do
   end
 
   scope "/", HTEWeb do
-    pipe_through :browser # Use the default browser stack
+    # Use the default browser stack
+    pipe_through :browser
 
     get "/", PageController, :index
   end

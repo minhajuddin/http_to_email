@@ -9,7 +9,7 @@ defmodule HTE.Application do
     # Define workers and child supervisors to be supervised
     children = [
       # Start the endpoint when the application starts
-      supervisor(HTEWeb.Endpoint, []),
+      supervisor(HTEWeb.Endpoint, [])
       # Start your own worker by calling: HTE.Worker.start_link(arg1, arg2, arg3)
       # worker(HTE.Worker, [arg1, arg2, arg3]),
     ]

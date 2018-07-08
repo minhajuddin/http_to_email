@@ -6,9 +6,10 @@ defmodule HTE.Mixfile do
       app: :http_to_email,
       version: "0.0.1",
       elixir: "~> 1.4",
-      elixirc_paths: elixirc_paths(Mix.env),
-      compilers: [:phoenix, :gettext] ++ Mix.compilers,
-      start_permanent: Mix.env == :prod,
+      elixirc_paths: elixirc_paths(Mix.env()),
+      compilers: [:phoenix, :gettext] ++ Mix.compilers(),
+      start_permanent: Mix.env() == :prod,
+      dialyzer: [plt_add_deps: :transitive],
       deps: deps()
     ]
   end
@@ -25,7 +26,7 @@ defmodule HTE.Mixfile do
 
   # Specifies which paths to compile per environment.
   defp elixirc_paths(:test), do: ["lib", "test/support"]
-  defp elixirc_paths(_),     do: ["lib"]
+  defp elixirc_paths(_), do: ["lib"]
 
   # Specifies your project dependencies.
   #
@@ -37,6 +38,11 @@ defmodule HTE.Mixfile do
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
+      {:dialyxir, "~> 0.5.0", only: [:dev], runtime: false},
+      {:ex_aws, "~> 2.0"},
+      {:ex_aws_dynamo, "~> 2.0"},
+      {:poison, "~> 3.0"},
+      {:hackney, "~> 1.9"},
       {:cowboy, "~> 1.0"}
     ]
   end
