@@ -43,7 +43,8 @@ defmodule HTE.Mixfile do
       {:ex_aws_dynamo, "~> 2.0"},
       {:poison, "~> 3.0"},
       {:hackney, "~> 1.9"},
-      {:cowboy, "~> 1.0"}
+      {:cowboy, "~> 1.0"},
+      {:distillery, "> 0.0.0"},
     ]
   end
 end
